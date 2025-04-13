@@ -177,9 +177,7 @@ a {
     flex-direction: column;
   }
 
-   .terminal{
-    height: 40vh;
-  }
+
 }
 
 @media (max-width: 768px) {
@@ -220,9 +218,6 @@ a {
     font-size: 0.9rem;
   }
 
-   .terminal{
-    height: 40vh;
-  }
 }
 
 @media (max-width: 480px) {
@@ -247,7 +242,5 @@ a {
     font-size: 0.30rem;
   }
 
-  .terminal{
-    height: 40vh;
-  }
+ 
 }
