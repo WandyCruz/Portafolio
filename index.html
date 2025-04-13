@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wandy Terminal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="terminal">
+  <div id="output"></div>
+
+  <div id="comandos" class="comandos">
+    📜 Comandos disponibles:
+    <ul>
+      <li><code>projects</code> → Muestra algunos de mis trabajos</li>
+      <li><code>skills</code>   → Tecnologías y herramientas que uso</li>
+      <li><code>about</code>    → Un poco sobre mí</li>
+      <li><code>contact</code>  → Cómo puedes encontrarme</li>
+    </ul>
+  </div>
+
+  <div class="prompt">
+    <span>wandy@portfolio:~$</span>
+    <input type="text" id="input-line" autofocus />
+    <span class="cursor">CARGANDO</span>
+    <button id="clear-btn">🧹</button>
+  </div>
+</div>
+
+<!-- Ventana flotante skills -->
+<div class="ventana-retro" id="ventana-tecnologias">
+  <div class="barra-superior">
+    <span class="titulo">Mis Tecnologías</span>
+    <button class="cerrar" onclick="this.parentElement.parentElement.style.display='none'">✕</button>
+  </div>
+  <div class="contenido-retro">
+    <ul class="lista-tech">
+      <li>🧱 HTML</li>
+      <li>🎨 CSS</li>
+      <li>⚡ JavaScript</li>
+      <li>🌬️ Tailwind CSS</li>
+      <li>🧠 React</li>
+      <li>🐘 PostgreSQL</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Neofetch -->
+<div class="neofetch-retro" id="neofetch">
+  <pre class="ascii-art">
+       1
+      111
+     11111
+    1111111
+   111111111
+  11111111111
+     10001
+     10001
+     10001
+     10001
+     10001
+      111
+       1
+  </pre>
+  <div class="info-retro">
+    <p><span class="label">Usuario:</span> @tudev</p>
+    <p><span class="label">Rol:</span> Desarrollador Full Stack</p>
+    <p><span class="label">Lenguajes:</span> HTML, CSS, JS, SQL</p>
+    <p><span class="label">Frameworks:</span> Bootstrap, Node.js</p>
+    <p><span class="label">Sistema:</span> RetroWeb OS 1.0</p>
+    <p><span class="label">Proyectos:</span> <a href="#">→ Ver repos</a></p>
+  </div>
+</div>
+
+
+<div class="ventana-retro" id="ventana-proyectos">
+    <div class="barra-superior">
+      <span class="titulo">Mis Proyectos</span>
+      <button class="cerrar" onclick="this.parentElement.parentElement.style.display='none'">✕</button>
+    </div>
+    <div class="contenido-retro proyectos">
+      <div class="proyecto">
+        <h3>🧮 Gestor de Inventario</h3>
+        <p>Aplicación para administrar productos, stock y ventas.</p>
+        <a href="https://github.com/usuario/proyecto1" target="_blank">🔗 Ver en GitHub</a>
+      </div>
+      <div class="proyecto">
+        <h3>📱 App de Clima</h3>
+        <p>Muestra el clima actual usando la API de OpenWeather.</p>
+        <a href="https://github.com/usuario/proyecto2" target="_blank">🔗 Ver en GitHub</a>
+      </div>
+      <div class="proyecto">
+        <h3>🌐 Página Web Personal</h3>
+        <p>Portafolio y blog hechos con HTML, CSS y JS puro.</p>
+        <a href="https://usuario.github.io" target="_blank">🔗 Ver página</a>
+      </div>
+    </div>
+  </div>
+  
+
+<script src="main.js"></script>
+</body>
+</html>
