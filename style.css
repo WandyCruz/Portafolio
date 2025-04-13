@@ -249,7 +249,11 @@ a {
   body {
     font-size: 14px;
   }
-
+  
+#output {
+  max-height: 80vh;
+  overflow-y: auto;
+}
   .terminal {
     padding: 0.5rem;
   }
