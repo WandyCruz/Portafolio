@@ -244,3 +244,70 @@ a {
 
  
 }
+
+@media (max-width: 380px) {
+  body {
+    font-size: 14px;
+  }
+
+  .terminal {
+    padding: 0.5rem;
+  }
+
+  .ventana-retro {
+    width: 95%;
+    left: 2.5%;
+    top: 2%;
+    padding: 0.8rem;
+  }
+
+  .ventana-retro.proyectos {
+    width: 95%;
+    left: 2.5%;
+    top: 5%;
+    max-height: 55%;
+    padding: 0.8rem;
+  }
+
+  .neofetch-retro {
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 75%;
+    font-size: 45%;
+    flex-direction: column;
+    padding: 0.6rem;
+  }
+
+  .ascii-art {
+    font-size: 0.6rem;
+    margin-right: 0;
+    margin-bottom: 0.8rem;
+  }
+
+  #input-line {
+    font-size: 0.6rem;
+  }
+
+  .comandos {
+    font-size: 0.75rem;
+    padding: 0.6rem;
+  }
+
+  #clear-btn {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.4rem;
+  }
+
+  .proyectos .proyecto {
+    padding: 0.6rem;
+  }
+
+  .proyectos .proyecto h3 {
+    font-size: 0.85rem;
+  }
+
+  .proyectos .proyecto a {
+    font-size: 0.75rem;
+  }
+}
