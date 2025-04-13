@@ -5,6 +5,7 @@ body {
   font-family: 'Fira Code', monospace;
   height: 100vh;
   overflow: hidden;
+  background-size: cover;
 }
 
 .terminal {
@@ -218,9 +219,9 @@ a {
 
 @media (max-width: 480px) {
   .ventana-retro {
-    width: 60%;
-    left: 8%;
-    top: 10%;
+    width: 90%;
+    left: 5%;
+    top: 5%;
   }
 
   .neofetch-retro {
@@ -231,11 +232,14 @@ a {
   }
 
   .comandos {
-    font-size: 0.8rem;
-    bottom: 20%;
+    font-size: 0.1rem;
   }
 
   #input-line {
     font-size: 0.95rem;
+  }
+
+  .terminal{
+    height: 80vh;
   }
 }
