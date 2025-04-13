@@ -251,8 +251,7 @@ a {
   }
   
 #output {
-  max-height: 80vh;
-  overflow-y: auto;
+margin-top: 30%;
 }
   .terminal {
     padding: 0.5rem;
