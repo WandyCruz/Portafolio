@@ -218,9 +218,9 @@ a {
 
 @media (max-width: 480px) {
   .ventana-retro {
-    width: 90%;
-    left: 5%;
-    top: 5%;
+    width: 60%;
+    left: 8%;
+    top: 10%;
   }
 
   .neofetch-retro {
@@ -232,6 +232,7 @@ a {
 
   .comandos {
     font-size: 0.8rem;
+    bottom: 20%;
   }
 
   #input-line {
