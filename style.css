@@ -232,14 +232,14 @@ a {
   }
 
   .comandos {
-    font-size: 0.1rem;
+    font-size: 0.8rem;
   }
 
   #input-line {
-    font-size: 0.95rem;
+    font-size: 0.30rem;
   }
 
   .terminal{
-    height: 80vh;
+    height: 70vh;
   }
 }
