@@ -176,6 +176,10 @@ a {
     font-size: 70%;
     flex-direction: column;
   }
+
+   .terminal{
+    height: 40vh;
+  }
 }
 
 @media (max-width: 768px) {
@@ -214,6 +218,10 @@ a {
 
   .comandos {
     font-size: 0.9rem;
+  }
+
+   .terminal{
+    height: 40vh;
   }
 }
 
