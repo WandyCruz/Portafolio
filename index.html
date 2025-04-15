@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wandy Terminal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <title>Portfolio Terminal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Bootstrap (solo para hacer responsive sin tocar tu diseño) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="terminal">
+<div class="terminal container-fluid">
   <div id="output"></div>
 
   <div id="comandos" class="comandos">
@@ -22,18 +24,19 @@
     </ul>
   </div>
 
-  <div class="prompt">
-    <span class="prompt-label">wandy@portfolio:~$</span>
-    <input type="text" id="input-line" autofocus />
+  <div class="prompt d-flex flex-wrap align-items-center">
+    <span class="prompt-label me-2">wandy@portfolio:~$</span>
+    <input type="text" id="input-line" autofocus class="flex-grow-1 mb-2 mb-md-0" />
     <span class="cursor">▌</span>
-    <button id="clear-btn">🧹</button>
+    <button id="clear-btn" class="ms-2">🧹</button>
   </div>
 </div>
 
 <!-- Neofetch -->
-<div class="neofetch-retro" id="neofetch">
-  <div class="barra-superior">
-  <pre class="ascii-art">
+<div class="neofetch-retro container-fluid mt-4" id="neofetch">
+  <div class="barra-superior row flex-wrap">
+    <div class="col-12 col-md-4 text-center">
+      <pre class="ascii-art">
        1
       111
      11111
@@ -47,21 +50,22 @@
      10001
       111
        1
-  </pre>
-  <div class="info-retro">
-    <p><span class="label">Usuario:</span> @tudev</p>
-    <p><span class="label">Rol:</span> Desarrollador Full Stack</p>
-    <p><span class="label">Lenguajes:</span> HTML, CSS, JS, SQL</p>
-    <p><span class="label">Frameworks:</span> Bootstrap, Node.js</p>
-    <p><span class="label">Sistema:</span> RetroWeb OS 1.0</p>
-    <p><span class="label">Proyectos:</span> <a href="#">→ Ver repos</a></p>
-  </div>
+      </pre>
+    </div>
+    <div class="info-retro col-12 col-md-8">
+      <p><span class="label">Usuario:</span> @tudev</p>
+      <p><span class="label">Rol:</span> Desarrollador Full Stack</p>
+      <p><span class="label">Lenguajes:</span> HTML, CSS, JS, SQL</p>
+      <p><span class="label">Frameworks:</span> Bootstrap, Node.js</p>
+      <p><span class="label">Sistema:</span> RetroWeb OS 1.0</p>
+      <p><span class="label">Proyectos:</span> <a href="#">→ Ver repos</a></p>
+    </div>
   </div>
 </div>
 
 <!-- Ventana flotante: Skills -->
 <div class="ventana-retro" id="ventana-tecnologias">
-  <div class="barra-superior">
+  <div class="barra-superior d-flex justify-content-between align-items-center">
     <span class="titulo">Mis Tecnologías</span>
     <button class="cerrar" onclick="this.parentElement.parentElement.style.display='none'">✕</button>
   </div>
@@ -77,26 +81,24 @@
   </div>
 </div>
 
-
-
 <!-- Ventana flotante: Proyectos -->
 <div class="ventana-retro proyectos" id="ventana-proyectos">
-  <div class="barra-superior">
+  <div class="barra-superior d-flex justify-content-between align-items-center">
     <span class="titulo">Mis Proyectos</span>
     <button class="cerrar" onclick="this.parentElement.parentElement.style.display='none'">✕</button>
   </div>
   <div class="contenido-retro proyectos">
-    <div class="proyecto">
+    <div class="proyecto mb-3">
       <h3>🧮 Gestor de Inventario</h3>
       <p>Aplicación para administrar productos, stock y ventas.</p>
       <a href="https://github.com/usuario/proyecto1" target="_blank">🔗 Ver en GitHub</a>
     </div>
-    <div class="proyecto">
+    <div class="proyecto mb-3">
       <h3>📱 App de Clima</h3>
       <p>Muestra el clima actual usando la API de OpenWeather.</p>
       <a href="https://github.com/usuario/proyecto2" target="_blank">🔗 Ver en GitHub</a>
     </div>
-    <div class="proyecto">
+    <div class="proyecto mb-3">
       <h3>🌐 Página Web Personal</h3>
       <p>Portafolio y blog hechos con HTML, CSS y JS puro.</p>
       <a href="https://usuario.github.io" target="_blank">🔗 Ver página</a>
@@ -104,13 +106,12 @@
   </div>
 </div>
 
-
+<!-- Ventana flotante: Contacto -->
 <div class="ventana-retro" id="ventana-contacto">
-  <div class="barra-superior">
+  <div class="barra-superior d-flex justify-content-between align-items-center">
     <span>Contacto</span>
     <button class="cerrar" onclick="document.getElementById('ventana-contacto').style.display='none'">✕</button>
   </div>
-
   <div class="contenido-ventana">
     <p>¡Hola! Puedes escribirme a:</p>
     <p><strong>Email:</strong> ejemplo@correo.com</p>
@@ -118,8 +119,6 @@
     <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/tuusuario" target="_blank">tuusuario</a></p>
   </div>
 </div>
-
-
 
 <script src="main.js"></script>
 </body>
