@@ -7,7 +7,6 @@ body {
   color: #00ffe1;
   height: 100vh;
   overflow: hidden;
-  overflow: none;
 }
 
 .terminal {
@@ -22,7 +21,7 @@ body {
   backdrop-filter: blur(6px);
   border: 1px solid rgba(0, 255, 255, 0.3);
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
-  max-width: 100%;
+  max-width: 70%;
   margin: 0 auto;
 }
 
@@ -87,7 +86,7 @@ body {
 }
 
 .comandos {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   padding: 1rem;
   border-radius: 8px;
   border: 1px solid #00ffe1;
@@ -131,12 +130,14 @@ body {
   transform: translateX(-50%);
   display: flex;
   flex-wrap: wrap;
+  width: 30%;
 }
 
 .ascii-art {
   margin-right: 1rem;
   font-weight: bold;
   color: #0ff;
+  width: 100%;
 }
 
 a {
@@ -150,7 +151,7 @@ a:hover {
 .proyectos .proyecto {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid #00ffe1;
-  padding: 1rem;
+  padding: 0.3rem;
   border-radius: 8px;
   margin: 0.5rem 0;
 }
@@ -222,36 +223,5 @@ a:hover {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* Media Queries para pantallas pequeñas */
-@media (max-width: 600px) {
-  .prompt {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .ventana-retro,
-  .neofetch-retro,
-  .contacto-retro {
-    width: 70%;
-    padding: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-  }
-
-  .ascii-art {
-    margin: 0 0 1rem 0;
-  }
-
-  #input-line {
-    font-size: 0.9rem;
-  }
-
-  .comandos,
-  .proyectos .proyecto {
-    font-size: 0.9rem;
   }
 }
