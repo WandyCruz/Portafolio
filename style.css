@@ -7,6 +7,7 @@ body {
   color: #00ffe1;
   height: 100vh;
   overflow: hidden;
+  overflow: none;
 }
 
 .terminal {
