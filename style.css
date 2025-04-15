@@ -234,7 +234,7 @@ a:hover {
   .ventana-retro,
   .neofetch-retro,
   .contacto-retro {
-    width: 95%;
+    width: 70%;
     padding: 1rem;
     left: 50%;
     transform: translateX(-50%);
