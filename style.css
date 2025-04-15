@@ -86,7 +86,7 @@ body {
 }
 
 .comandos {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   padding: 1rem;
   border-radius: 8px;
   border: 1px solid #00ffe1;
@@ -238,6 +238,7 @@ a:hover {
     padding: 1rem;
     left: 50%;
     transform: translateX(-50%);
+    margin: 0;
   }
 
   .ascii-art {
