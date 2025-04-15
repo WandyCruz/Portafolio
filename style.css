@@ -6,9 +6,10 @@ body {
   background: linear-gradient(160deg, #1b2735, #090a0f);
   color: #00ffe1;
   height: 100vh;
-  overflow-x: hidden; /* <-- importante para evitar scroll lateral */
+  overflow-x: hidden;  /* Evita el scroll horizontal */
 }
 
+/* Terminal */
 .terminal {
   display: flex;
   flex-direction: column;
@@ -21,11 +22,11 @@ body {
   backdrop-filter: blur(6px);
   border: 1px solid rgba(0, 255, 255, 0.3);
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
-  width: 100%;
   max-width: 70%;
   margin: 0 auto;
 }
 
+/* Contenido */
 #output {
   flex: 1;
   overflow-y: auto;
@@ -36,6 +37,7 @@ body {
   line-height: 1.4;
 }
 
+/* Prompt */
 .prompt {
   display: flex;
   align-items: center;
@@ -71,6 +73,7 @@ body {
   }
 }
 
+/* Botón de limpiar */
 #clear-btn {
   background: transparent;
   color: #00ffd5;
@@ -80,12 +83,17 @@ body {
   font-weight: bold;
   border-radius: 6px;
   transition: all 0.2s ease-in-out;
+  flex-shrink: 0;
+  font-size: 1rem;
+  margin-left: 0.5rem;  /* Espacio adicional */
 }
+
 #clear-btn:hover {
   background: #00ffd5;
   color: #000;
 }
 
+/* Comandos */
 .comandos {
   margin-top: 1rem;
   padding: 1rem;
@@ -101,6 +109,7 @@ body {
   font-weight: bold;
 }
 
+/* Ventanas flotantes */
 .ventana-retro,
 .neofetch-retro,
 .contacto-retro {
@@ -118,6 +127,7 @@ body {
   width: 300px;
 }
 
+/* Posicionamiento adaptable */
 .ventana-retro {
   top: 20%;
   left: 50%;
@@ -140,14 +150,17 @@ body {
   width: 100%;
 }
 
+/* Enlaces */
 a {
   color: #00eaff;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
+/* Proyectos */
 .proyectos .proyecto {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid #00ffe1;
@@ -161,6 +174,7 @@ a:hover {
   color: #0ff;
 }
 
+/* Contacto */
 .contacto-retro {
   display: none;
   bottom: 10%;
@@ -189,10 +203,12 @@ a:hover {
   color: #00eaff;
   text-decoration: none;
 }
+
 .contacto-retro a:hover {
   text-decoration: underline;
 }
 
+/* Barra superior */
 .barra-superior {
   background: #333;
   padding: 8px;
@@ -202,10 +218,12 @@ a:hover {
   align-items: center;
 }
 
+/* Contenido de la ventana */
 .contenido-ventana {
   padding: 10px;
 }
 
+/* Botón de cerrar */
 .cerrar {
   background: transparent;
   color: white;
@@ -214,6 +232,7 @@ a:hover {
   cursor: pointer;
 }
 
+/* Animación fadeIn */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -225,40 +244,23 @@ a:hover {
   }
 }
 
-/* 📱 RESPONSIVE: pantallas pequeñas */
-@media screen and (max-width: 600px) {
-  .terminal {
-    max-width: 95%;
-    padding: 0.5rem;
-  }
-
-  .prompt {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  #input-line {
-    width: 100%;
-    min-width: unset;
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Ajuste de ventanas flotantes en pantallas pequeñas */
+  .ventana-retro, .neofetch-retro, .contacto-retro {
+    width: 90%;  /* Ajusta el tamaño al 90% */
+    top: 10%;  /* Alinea mejor las ventanas */
   }
 
   .neofetch-retro {
-    width: 95%;
     bottom: 10%;
+    width: 80%;  /* Reduce el tamaño en pantallas pequeñas */
+    flex-wrap: wrap;
   }
 
-  .ventana-retro,
-  .contacto-retro {
-    width: 95%;
-    max-width: 95%;
-  }
-
-  .ascii-art {
-    font-size: 12px;
-    margin-right: 0;
-  }
-
-  .comandos {
-    font-size: 0.9rem;
+  /* Ajuste del botón de limpiar en pantallas pequeñas */
+  #clear-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;  /* Reduce el tamaño en pantallas pequeñas */
   }
 }
