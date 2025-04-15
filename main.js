@@ -4,9 +4,11 @@ const comandosBox = document.getElementById('comandos');
 const ventana = document.getElementById('ventana-tecnologias');
 const neofetch = document.getElementById('neofetch');
 const clearBtn = document.getElementById('clear-btn');
+const contacto = document.getElementById('ventana-contacto');
 comandosBox.style.opacity = '1';
 ventana.style.display = 'none';
 neofetch.style.display = 'none';
+contacto.style.display = "none";
 
 // Bienvenida tipo máquina de escribir
 function escribirTexto(texto, elemento, velocidad, callback) {
@@ -46,6 +48,10 @@ entrada.addEventListener('keydown', (e) => {
         neofetch.style.display = 'flex';
         break;
 
+        case 'contact':
+          contacto.style.display = "block"
+          break;
+
         case 'projects':
   document.getElementById('ventana-proyectos').style.display = 'block';
   break;
@@ -65,4 +71,45 @@ clearBtn.addEventListener('click', () => {
   comandosBox.style.display = 'none';
   ventana.style.display = 'none';
   neofetch.style.display = 'none';
+});
+
+
+function makeDraggable(windowElement, handleElement) {
+  let offsetX = 0, offsetY = 0, startX = 0, startY = 0;
+
+  handleElement.onmousedown = dragMouseDown;
+
+  function dragMouseDown(e) {
+    e.preventDefault();
+    startX = e.clientX;
+    startY = e.clientY;
+    document.onmouseup = stopDragging;
+    document.onmousemove = drag;
+  }
+
+  function drag(e) {
+    e.preventDefault();
+    offsetX = startX - e.clientX;
+    offsetY = startY - e.clientY;
+    startX = e.clientX;
+    startY = e.clientY;
+
+    windowElement.style.top = (windowElement.offsetTop - offsetY) + "px";
+    windowElement.style.left = (windowElement.offsetLeft - offsetX) + "px";
+  }
+
+  function stopDragging() {
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+// Aplicar la funcionalidad a todas las ventanas con barra-superior
+document.querySelectorAll('.ventana-retro').forEach(ventana => {
+  const barra = ventana.querySelector('.barra-superior');
+  if (barra) {
+    // Aseguramos posición absoluta si no la tiene
+    ventana.style.position = 'absolute';
+    makeDraggable(ventana, barra);
+  }
 });
