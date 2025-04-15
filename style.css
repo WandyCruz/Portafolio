@@ -6,7 +6,7 @@ body {
   background: linear-gradient(160deg, #1b2735, #090a0f);
   color: #00ffe1;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden; /* <-- importante para evitar scroll lateral */
 }
 
 .terminal {
@@ -21,6 +21,7 @@ body {
   backdrop-filter: blur(6px);
   border: 1px solid rgba(0, 255, 255, 0.3);
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+  width: 100%;
   max-width: 70%;
   margin: 0 auto;
 }
@@ -117,7 +118,6 @@ body {
   width: 300px;
 }
 
-/* Posicionamiento adaptable */
 .ventana-retro {
   top: 20%;
   left: 50%;
@@ -161,7 +161,6 @@ a:hover {
   color: #0ff;
 }
 
-/* Contacto */
 .contacto-retro {
   display: none;
   bottom: 10%;
@@ -223,5 +222,43 @@ a:hover {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* 📱 RESPONSIVE: pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  .terminal {
+    max-width: 95%;
+    padding: 0.5rem;
+  }
+
+  .prompt {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #input-line {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .neofetch-retro {
+    width: 95%;
+    bottom: 10%;
+  }
+
+  .ventana-retro,
+  .contacto-retro {
+    width: 95%;
+    max-width: 95%;
+  }
+
+  .ascii-art {
+    font-size: 12px;
+    margin-right: 0;
+  }
+
+  .comandos {
+    font-size: 0.9rem;
   }
 }
